@@ -34,7 +34,7 @@
 2:DeployableBatteries,DeployableBatteries/DeployableBatteries-173.csproj,DeployableBatteries-173.version,GameData/DeployableBatteries/Plugins
 
 # 3:SOURCEFILE, DESTDIR
-3:DeployableBatteries=173.version,GameData/DeployableBatteries
+3:DeployableBatteries-173.version,GameData/DeployableBatteries
 3:License.md,GameData/DeployableBatteries
 #3:README.md,GameData/KerbalHotSeat
 
