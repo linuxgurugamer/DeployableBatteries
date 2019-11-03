@@ -35,7 +35,7 @@
 
 # 3:SOURCEFILE, DESTDIR
 3:DeployableBatteries=173.version,GameData/DeployableBatteries
-3:License.md,GameData/KerbalHotSeat
+3:License.md,GameData/DeployableBatteries
 #3:README.md,GameData/KerbalHotSeat
 
 
