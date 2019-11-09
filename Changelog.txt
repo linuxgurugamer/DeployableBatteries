@@ -8,3 +8,14 @@ ChangeLog
 
 0.1.0.5 & 0.2.0.5
 	Version bump to force CKAN to properly see the new dependency for both versions
+
+0.1.0.6 & 0.2.0.6
+	Fixed calculation & display of Power-Unit-Hours
+	Changed display of PowerUnitsProduced to reduce confusion
+	Added code to deal with TimeWarping
+	Fixed batteries recharging at night from solar panels
+	Coded around a stock bug: https://bugs.kerbalspaceprogram.com/issues/24349
+		The ActualPowerUnitsProduced by a solar panel doesn't update if any timewarp is active
+	Added Base PowerUnitHours to PAW
+	Changed PowerUnitHours to Actual PowerUnitHours in PAW
+	Added data to info section about different levels of PUH
