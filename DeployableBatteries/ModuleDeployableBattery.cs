@@ -99,7 +99,7 @@ namespace DeployableBatteries
         int numBatteries = 0;
 
         const int delaySecs = 10;
-        int delayTics = (int)(delaySecs / Time.fixedDeltaTime);
+        int delayTics;
         int timeTics = 0;
 
         const float inv3600 = 1f / 3600f;
@@ -115,7 +115,7 @@ namespace DeployableBatteries
         public void Start()
         {
             Log = new Log("ModuleDeployableBattery");
-
+            delayTics = (int)(delaySecs / Time.fixedDeltaTime);
             ElectricityId = PartResourceLibrary.Instance.GetDefinition(power).id;
 
             var uiRange = this.Fields["maxPowerUnitsFlow"].uiControlCurrent() as UI_FloatRange;

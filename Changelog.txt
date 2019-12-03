@@ -19,3 +19,7 @@ ChangeLog
 	Added Base PowerUnitHours to PAW
 	Changed PowerUnitHours to Actual PowerUnitHours in PAW
 	Added data to info section about different levels of PUH
+	Added new parts from @hraban
+
+0.1.0.7 & 0.2.0.7
+	Fixed initialization of vars to be initialized in Start() rather than the instantiator
