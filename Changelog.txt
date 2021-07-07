@@ -23,3 +23,7 @@ ChangeLog
 
 0.1.0.7 & 0.2.0.7
 	Fixed initialization of vars to be initialized in Start() rather than the instantiator
+
+0.1.0.8 & 0.2.0.8
+	Thanks to @tony48 for the following
+		Added restock whitelist
