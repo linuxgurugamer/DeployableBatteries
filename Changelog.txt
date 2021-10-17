@@ -27,3 +27,7 @@ ChangeLog
 0.1.0.8 & 0.2.0.8
 	Thanks to @tony48 for the following
 		Added restock whitelist
+
+0.1.0.9 & 0.2.0.9
+	Added AssemblyFileVersion
+	Updated version file for 1.12
