@@ -1,25 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2005
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeployableBatteries-173", "DeployableBatteries\DeployableBatteries-173.csproj", "{53881F1D-C121-4CC6-9D05-879976849333}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D36A6B0F-06BF-4E19-A1C4-9A17A6806941}"
 	ProjectSection(SolutionItems) = preProject
-		buildRelease-173.bat = buildRelease-173.bat
+		buildRelease.bat = buildRelease.bat
 		Changelog.txt = Changelog.txt
-		deploy-173.bat = deploy-173.bat
-		deploy-180.bat = deploy-180.bat
-		DeployableBatteries-173.version = DeployableBatteries-173.version
-		DeployableBatteries-180.version = DeployableBatteries-180.version
-		jenkins-173.txt = jenkins-173.txt
-		jenkins-180.txt = jenkins-180.txt
+		deploy.bat = deploy.bat
+		DeployableBatteries.version = DeployableBatteries.version
+		GameData\DeployableBatteries\Localization\en-us.cfg = GameData\DeployableBatteries\Localization\en-us.cfg
+		jenkins.txt = jenkins.txt
 		License.md = License.md
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeployableBatteries-180", "DeployableBatteries\DeployableBatteries-180.csproj", "{100DAC36-E705-46BE-A90D-8321EA514F75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeployableBatteries", "DeployableBatteries\DeployableBatteries.csproj", "{100DAC36-E705-46BE-A90D-8321EA514F75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{53881F1D-C121-4CC6-9D05-879976849333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53881F1D-C121-4CC6-9D05-879976849333}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53881F1D-C121-4CC6-9D05-879976849333}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53881F1D-C121-4CC6-9D05-879976849333}.Release|Any CPU.Build.0 = Release|Any CPU
 		{100DAC36-E705-46BE-A90D-8321EA514F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{100DAC36-E705-46BE-A90D-8321EA514F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{100DAC36-E705-46BE-A90D-8321EA514F75}.Release|Any CPU.ActiveCfg = Release|Any CPU

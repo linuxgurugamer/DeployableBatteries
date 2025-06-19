@@ -1,8 +1,8 @@
-﻿using System;
-using UnityEngine;
 using Experience.Effects;
 using KSP.Localization;
 using KSP_Log;
+using System;
+using UnityEngine;
 
 namespace DeployableBatteries
 {
@@ -83,8 +83,10 @@ namespace DeployableBatteries
         [KSPField]
         public float solarPanelChargeRate = 0.35f / 20f;
 
+        #region NO_LOCALIZATION
         [KSPField]
         public string power = "ElectricCharge";
+        #endregion
 
         int ElectricityId;
 
@@ -112,6 +114,7 @@ namespace DeployableBatteries
         /// Initialize all values
         /// Set maxValue for the ProgressBar and FloatRange from part config
         /// </summary>
+        #region NO_LOCALIZATION
         public void Start()
         {
             Log = new Log("ModuleDeployableBattery");
@@ -134,6 +137,7 @@ namespace DeployableBatteries
             }
             lastTimeUpdated = Planetarium.fetch.time;
         }
+        #endregion
 
         /// <summary>
         /// Find all Cargo parts within range, used to calculate power needs
@@ -221,8 +225,10 @@ namespace DeployableBatteries
                             float num = Vector3.Distance(base.transform.position, moduleSolar.part.transform.position);
                             if (num <= closestModuleControl.controlUnitRange)
                             {
+                                #region NO_LOCALIZATION
                                 Log.Info("vessel.directSunlight: " + moduleSolar.vessel.directSunlight + ", Solar found, PowerUnitsRequired: " + moduleSolar.PowerUnitsRequired + ", PowerUnitsProduced: " + moduleSolar.PowerUnitsProduced +
                                     ", ActualPowerUnitsProduced: " + moduleSolar.ActualPowerUnitsProduced);
+                                #endregion
 
                                 if (moduleSolar.Enabled)
                                 {
@@ -280,8 +286,10 @@ namespace DeployableBatteries
                         {
                             kerbalEffectAdjustments = effect.GetValue();
                             invKerbalEffectAdjustments = 1f / kerbalEffectAdjustments;
-                            string msg1 = "Kerbal Effect Adjustment: " + kerbalEffectAdjustments + ", Description: " + Localizer.Format("#autoLOC_8002229", effect.GetValue());
-                            string msg2 = ("MaxValue: " + ((solarPanelChargeRate / kerbalEffectAdjustments) * part.Resources[power].amount).ToString("F2"));
+
+                            string msg1 = Localizer.Format("#LOC_DB_1") + kerbalEffectAdjustments + Localizer.Format("#LOC_DB_2") +
+                                Localizer.Format("#autoLOC_8002229", effect.GetValue());
+                            string msg2 = Localizer.Format("#LOC_DB_3") + ((solarPanelChargeRate / kerbalEffectAdjustments) * part.Resources[power].amount).ToString("F2");
 
                             Log.Info(msg1);
                             Log.Info(msg2);
@@ -364,16 +372,18 @@ namespace DeployableBatteries
 
         public string GetModuleTitle()
         {
+            #region NO_LOCALIZATION
             return "ModuleDeployableBattery";
+            #endregion
         }
 
         public override string GetInfo()
         {
             string str = power + ": " + part.Resources[power].amount + "/" + part.Resources[power].maxAmount;
-            str += "\n\nPower-Unit-Hours (PUH)";
-            str += "\n\nBase PUH: " + ((solarPanelChargeRate ) * part.Resources[power].amount).ToString("F2");
-            str += "\nEngineer lvl 2-3 PUH: " + ((solarPanelChargeRate * 2) * part.Resources[power].amount).ToString("F2");
-            str += "\nEngineer lvl 4-5 PUH: " + ((solarPanelChargeRate * 3) * part.Resources[power].amount).ToString("F2");
+            str += Localizer.Format("#LOC_DB_4");
+            str += Localizer.Format("#LOC_DB_5") + ((solarPanelChargeRate) * part.Resources[power].amount).ToString("F2");
+            str += Localizer.Format("#LOC_DB_6") + ((solarPanelChargeRate * 2) * part.Resources[power].amount).ToString("F2");
+            str += Localizer.Format("#LOC_DB_7") + ((solarPanelChargeRate * 3) * part.Resources[power].amount).ToString("F2");
             return str;
         }
 
